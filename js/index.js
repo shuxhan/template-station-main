@@ -90,16 +90,10 @@ PageClick = function (pageclickednumber) {
 
 
 
-
-
-
-
-
 // 返回顶部
 $("#test").click(function () {
     $('html,body').animate({ 'scrollTop': '0' }, 500)
 })
-
 
 // ajax 请求获取数据
 var str = '';
@@ -108,40 +102,43 @@ $.ajax({
     type:'get',
     dataType:'json',
     success:function(data){
-        console.log('ajax请求数据成功')
+        console.log('数据请求成功')
         $.each(data.message,function(i, item){ 
             console.log(item) // 返回json数据
-            str += `
-            <li class="wrap-item">
-            <div class="pic-wrap">
-                <div class="pic">
-                    <div class="pic-son">
-                        <a href=" ` + item.link + `" target="_blank"><img src=" ` + item.pic+ `" alt="缩略图"></a>
-
-                    </div>
-                </div>
-
-                <div class="pic-main">
-                    <div class="pic-title">
-                        <span>编号：</span>
-                        <span> ` + item.title + ` </span>
-                    </div>
-                    <div class="pic-guide"> `
-                        + item.guide +
-                    ` </div>
-                    <div class="pic-link" id="picLink">
-                        <a href=" ` + item.link + ` " target="_blank">预览</a>
-                    </div>
-                </div>
-            </div>
-        </li> 
-            `
+            p = "<li class='wrap-item'>"
+                    +"<div class='pic-wrap'>"
+                        +"<div class='pic'>"
+                            +"<div class='pic-son-wrap'>"
+                                +"<div class='pic-son'>"
+                                    +"<a href='"+item.link+"'>"
+                                        +"<img src='"+item.pic+"' alt='缩略图'>"
+                                    +"</a>"
+                                +"</div>"
+                            +"</div>"
+                            +"<div class='pic-main'>"
+                                +"<div class='pic-title'>"
+                                    +"<span>"+"编号："+"</span>"+"<span>"+item.title+"</span>"
+                                +"</div>"
+                                +"<div class='pic-guide'>"
+                                    +item.guide
+                                +"</div>"
+                                +"<div class='pic-link' id='picLink'>"
+                                    +"<a href='"+item.link+"'>"
+                                        +"预览"
+                                    +"</a>"
+                                +"</div>"
+                            +"</div>"
+                        +"</div>"
+                        +"</div>"
+                    +"</li>"
+            str += p;
         })
+
         $("#list").html(str)
         // 数据字段被渲染到list中
     },
     error: function() {
-        console.log('请求失败')
+        console.log('数据请求失败')
     }
 })
 
@@ -163,7 +160,8 @@ window.onload = function () {
     }
     var footer = document.getElementById("footer");
     var distanceFromFooterToTop = getTop(footer);
-    console.log(distanceFromFooterToTop)
+    // console.log(distanceFromFooterToTop)
+    
     // footer到顶部距离，再减去半屏
     // 判断页面到达这个高度时开始加载动画
 

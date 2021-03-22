@@ -19,6 +19,10 @@ ol,ul,li {
     margin: 0;
 }
 
+img {
+    border: none;
+}
+
 
 /* 头部logo */
 .header {
@@ -161,16 +165,21 @@ ol,ul,li {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+    /* overflow: hidden; */
+}
+.pic-son-wrap {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
-.pic-son img {
+.pic-son {
     transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     -ms-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
 }
-.pic:hover .pic-son img{
+.pic-son:hover{
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -184,6 +193,7 @@ ol,ul,li {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    height: 100%;
 }
 
 .wm {
@@ -223,7 +233,7 @@ ol,ul,li {
     margin: 0 auto;
 }
 
-.pic a {
+.pic-son > a {
     display: block;
     width: 100%;
     margin: 0 auto;
@@ -237,7 +247,7 @@ ol,ul,li {
     width: 100%;
 }
 .pic-main {
-    width: 80%;
+    width: 98%;
     margin: 0 auto;
     margin-top: 10px;
 }
