@@ -96,7 +96,7 @@ $.ajax({
     url: './js/data.json',
     type: 'get',
     dataType: 'json',
-    async: false,   // 同步
+    async: false,
     success: function (data) {
         console.log('数据请求成功')
         $.each(data.message, function (i, item) {
