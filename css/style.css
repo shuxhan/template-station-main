@@ -32,7 +32,6 @@ img {
 .header {
     width: 100%;
     height: 100px;
-    /* position: sticky; */
     top: 0;
     z-index: 9;
 }
@@ -44,7 +43,7 @@ img {
     font-size: 12px;
     background: #333;
     color: #b0b0b0;
-    
+
 }
 
 .header-top-detail {
@@ -54,23 +53,27 @@ img {
     flex: 1;
     justify-content: space-between;
 }
-.header-top-detail > div:nth-child(1) span {
+
+.header-top-detail>div:nth-child(1) span {
     color: #ff6700;
 }
 
-.header-top-detail > div:nth-child(2) {
+.header-top-detail>div:nth-child(2) {
     display: flex;
     align-items: center;
 }
-.header-top-detail > div:nth-child(2) a {
+
+.header-top-detail>div:nth-child(2) a {
     color: #fff;
     text-decoration: underline;
 }
-.header-top-detail > div:nth-child(2) img {
+
+.header-top-detail>div:nth-child(2) img {
     height: 20px;
     margin-left: 20px;
 }
-.header-top-detail > div:nth-child(2) span {
+
+.header-top-detail>div:nth-child(2) span {
     color: #ff6700;
 }
 
@@ -80,6 +83,7 @@ img {
     background: #ff6700;
     z-index: 9;
 }
+
 .etc {
     position: fixed;
     top: 0;
@@ -105,6 +109,7 @@ img {
     background-size: cover;
     position: relative;
 }
+
 .banner::after {
     content: '';
     width: 100%;
@@ -112,7 +117,7 @@ img {
     position: absolute;
     left: 0;
     top: 0;
-    background: rgba(38,43,52,0.2) url(../image/bg.png);
+    background: rgba(38, 43, 52, 0.2) url(../image/bg.png);
 }
 
 .banner-main {
@@ -127,12 +132,14 @@ img {
     color: #c3c3c3;
     z-index: 1;
 }
+
 .banner-main ul li:nth-child(1) {
     letter-spacing: 5px;
     font-size: 12px;
     padding-bottom: 25px;
     position: relative;
 }
+
 .banner-main ul li:nth-child(1)::after {
     content: '';
     width: 62px;
@@ -143,6 +150,7 @@ img {
     bottom: 0;
     background: #ff6700;
 }
+
 .banner-main ul li:nth-child(2) {
     margin-top: 50px;
     width: 200px;
@@ -151,6 +159,7 @@ img {
     display: inline-block;
     border: 1px solid #c3c3c3;
 }
+
 .banner-main ul li:nth-child(2)::after {
     display: inline-block;
     content: '';
@@ -167,9 +176,10 @@ img {
 .banner-main ul li:nth-child(3) {
     margin: 0 auto;
     margin-top: 50px;
-    
+
 }
-.banner-main ul li:nth-child(3) span{
+
+.banner-main ul li:nth-child(3) span {
     display: block;
     margin-left: 50%;
     width: 1px;
@@ -185,17 +195,19 @@ img {
     text-align: center;
     padding-top: 20px;
 }
-.page-title > div {
+
+.page-title>div {
     color: #ff6700;
     font-size: 30px;
 }
-.page-title > p {
-   
+
+.page-title>p {
+
     margin-top: 6px;
     position: relative;
 }
 
-.page-title > p span {
+.page-title>p span {
     display: inline-block;
     padding: 0 14px;
     background: #fff;
@@ -203,7 +215,7 @@ img {
     font-size: 12px;
 }
 
-.page-title > p::after {
+.page-title>p::after {
     display: block;
     content: '';
     width: 100%;
@@ -218,7 +230,6 @@ img {
     max-width: 1328px;
     margin: 60px auto 20px;
     background: #f0f0f0;
-    /* padding: 0 4% 10px; */
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -245,6 +256,7 @@ img {
     line-height: 40px;
     color: #fff;
 }
+
 .category-search div {
     display: inline-block;
     width: 460px;
@@ -263,7 +275,7 @@ img {
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
-    -o-border-radius: 15px; 
+    -o-border-radius: 15px;
     box-sizing: border-box;
 }
 
@@ -276,8 +288,9 @@ img {
     position: absolute;
     right: -20px;
     top: 4px;
-   
+
 }
+
 .btn-int:hover {
     cursor: pointer;
 }
@@ -416,13 +429,15 @@ img {
     bottom: 0;
     z-index: 9;
 }
-.after:hover + .before{
+
+.after:hover+.before {
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
 }
+
 .pic-son>a {
     display: block;
     width: 100%;
@@ -432,6 +447,7 @@ img {
     overflow: hidden;
     position: relative;
 }
+
 .before {
     display: block;
     width: 100%;
@@ -446,18 +462,19 @@ img {
     -moz-transition: all 0.3s linear;
     -ms-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex-box;
-    display:flex;
-    -webkit-box-align:center;
-    -ms-flex-align:center;
-    align-items:center;
-    -webkit-box-pack:center;
-    -ms-flex-pack:center;
-    justify-content:center;
-    text-align:center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex-box;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
 }
+
 .before img {
     width: 40%;
 }
@@ -701,12 +718,15 @@ footer {
     flex: 1;
     justify-content: space-between
 }
+
 .footer-logo {
     width: 270px;
 }
+
 .footer-logo img {
     width: 100%;
 }
+
 .footer-adress {
     box-sizing: border-box;
     padding-top: 22px;
@@ -900,6 +920,7 @@ footer {
     .header-top-detail {
         max-width: 768px;
     }
+
     .pic {
         height: 450px
     }
@@ -911,12 +932,15 @@ footer {
     .wrap-item {
         margin-bottom: 80px
     }
+
     .pic-son {
         height: 480px;
     }
+
     .pic-son>a {
         height: 420px;
     }
+
     .before {
         height: 450px;
     }
@@ -933,18 +957,23 @@ footer {
         line-height: 52px;
         font-size: 20px;
     }
+
     .banner-main ul li:nth-child(2)::after {
         height: 23px;
     }
+
     .banner-main ul li:nth-child(3) {
         margin-top: 30px;
-    } 
+    }
+
     .pic {
         height: 360px
     }
+
     .pic-son>a {
         height: 330px;
     }
+
     .pic-son {
         height: 386px;
     }
@@ -967,20 +996,25 @@ footer {
     .banner {
         height: 260px;
     }
+
     .banner-main ul li:nth-child(2) {
         width: 130px;
         line-height: 44px;
         font-size: 18px;
     }
+
     .banner-main ul li:nth-child(3) span {
         height: 50px;
     }
-    .page-title > div {
+
+    .page-title>div {
         font-size: 20px;
     }
+
     .header {
         height: 60px;
     }
+
     .header-top {
         display: none;
     }
@@ -988,17 +1022,21 @@ footer {
     .category-search {
         height: 80px;
     }
+
     .sea-int {
         width: 100%;
         margin-left: 0;
     }
+
     .btn-int {
         right: 0;
     }
+
     .category-search div {
         display: block;
         width: 100%;
     }
+
     .wrap-item {
         width: 50%
     }

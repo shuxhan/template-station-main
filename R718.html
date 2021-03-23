@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R817</title>
-    <link rel="stylesheet" href="./css/normalize.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R817</title>
+<link rel="stylesheet" href="./css/normalize.css">
 </head>
 <body>
     <div class="preview-b">
@@ -47,46 +47,6 @@
     </div>
 
     <script src="./js/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $('.preview_link span.preview_link_span').click(function () {
-                $(this).siblings().removeClass('cur');
-                $(this).addClass('cur');
-                var data_width = $(this).attr('data-width');
-                $('.web_view_box_b').css('width', data_width);
-            });
-            var top_h;
-            if ($('.preview-top-b').is(':hidden')) {
-                top_h = 0;
-            } else {
-                top_h = $('.preview-top-b').outerHeight(true);
-            }
-            var iframeHeight = $(document).outerHeight(true) - top_h - 2;
-            $("#iframe").height(iframeHeight);
-        });
-
-        function handle(_this, color, pre_domain) {
-            $(_this).siblings().attr({"class": "color-square"});
-            $(_this).attr({"class": "color-square selected"});
-            var url = window.location.host;
-            var urls = url.split('.');
-            var domain = urls[urls.length - 2] + '.' + urls[urls.length - 1];
-            var d = new Date();
-            d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toUTCString();
-
-            console.log(pre_domain);
-            document.cookie = 'color_' + pre_domain + '=' + color + ';' + expires + '; domain=' + domain + ';path=' + '/';
-            location.reload();
-        }
-
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?fcf55f6a451f85c6dbd883bfe6bd9371";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+    <script src="./js/preview.js"></script>
 </body>
 </html>

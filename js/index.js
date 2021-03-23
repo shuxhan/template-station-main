@@ -208,12 +208,10 @@ body.onload = function () {
 }
 
 
-
 var slidetel = document.getElementsByClassName('slide-tel')[0];
 var slidetelspan = document.getElementsByClassName('slide-tel-span')[0];
 var slideqq = document.getElementsByClassName('slide-qq')[0];
 var slideqqspan = document.getElementsByClassName('slide-qq-span')[0];
-
 
 slidetel.onmouseover = function() {
     slidetelspan.style.backgroundColor = '#ff6700';
